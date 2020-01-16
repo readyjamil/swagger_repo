@@ -1,34 +1,57 @@
-openapi: 3.0.0
-info:
-  title: Jio Fleet Management System
-  version: 1.0.0
-  description: This is a jio Fleet Management System
-  termsOfService: 'http://swagger.io/terms/'
-  contact:
-    email: apiteam@swagger.io
-  license:
-    name: Apache 2.0
-    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
-servers:
-  - url: 'http://localhost/'
-  - url: 'https://localhost/'
-paths:
-  /users:
-    post:
-      summary: Adds a new user
-      requestBody:
-        content:
-          application/json:
-            schema:      # Request body contents
-              type: object
-              properties:
-                id:
-                  type: integer
-                name:
-                  type: string
-              example:   # Sample object
-                id: 10
-                name: Jessica Smith
-      responses:
-        '200':
-          description: OK
+{
+	"openapi": "3.0.0",
+	"info": {
+		"title": "Jio Fleet Management System",
+		"version": "1.0.0",
+		"description": "This is a jio Fleet Management System",
+		"termsOfService": "http://swagger.io/terms/",
+		"contact": {
+			"email": "apiteam@swagger.io"
+		},
+		"license": {
+			"name": "Apache 2.0",
+			"url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+		}
+	},
+	"servers": [
+		{
+			"url": "http://localhost/"
+		},
+		{
+			"url": "https://localhost/"
+		}
+	],
+	"paths": {
+		"/users": {
+			"post": {
+				"summary": "Adds a new user",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"id": {
+										"type": "integer"
+									},
+									"name": {
+										"type": "string"
+									}
+								},
+								"example": {
+									"id": 10,
+									"name": "Jessica Smith"
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			}
+		}
+	}
+}
